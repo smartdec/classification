@@ -7,7 +7,7 @@ Many of those vulnerabilities are well described in Smart Contract Weakness Clas
 Vulnerabilities caused by blockchain nature of the system.
 
 ### Miner creates a block
-Miner assembles block and thus can influence its contents (including transactions, their order, other block parameters). 
+Miner assembles block and thus can influence its contents (included transactions, their order, other block parameters). 
 - front-running / transaction reordering (SWC-114)
 - timestamp manipulation (SWC-116)
 - random with blockhash (SWC-120)
@@ -61,7 +61,7 @@ Vulnerabilities connected with the insufficient or incorrect authorization imple
 - constructor name (SWC-118)
 
 ### Trust
-Ethereum was designed as a trustless system. However, many smart contracts are built so that users have to trust the owner/administrator. This part of the system can be compromised in several ways.
+Ethereum was designed as a trustless system. However, many smart contracts are built so that users have to trust the owner/administrator. This part of the system can be compromised or used in an undesirable way.
 - overpowered owner
 - vulnerable off-chain server
 
