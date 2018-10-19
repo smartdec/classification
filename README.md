@@ -2,7 +2,7 @@
 Each standard vulnerability is made possible by one of the features of smart contracts. We unite types of vulnerabilities into groups by the corresponding features. We unite several groups into the same class if their features have the same nature.  
 Here is the list of classes and groups with some standard vulnerabilities categorized by this classification.
 
-##References
+## References
 The following registries were addressed in the classification.
 1. Smart Contract Weakness Classification [Registry](https://github.com/SmartContractSecurity/SWC-registry). 
 2. DASP [TOP-10](https://dasp.co/index.html).
