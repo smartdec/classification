@@ -13,16 +13,16 @@ Vulnerabilities caused by blockchain nature of the system.
 
 ### Block content manipulation
 Miner assembles block and thus can influence its contents (included transactions, their order, other block parameters).
-- Front-running / transaction reordering ([SWC-114](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-114.md), [DASP-7](https://dasp.co/#item-7), [Race Conditions / Front Running](https://github.com/sigp/solidity-security-blog#race-conditions--front-running-1))
-- Timestamp manipulation ([SWC-116](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-116.md), [DASP-8](https://dasp.co/#item-8), [Block Timestamp Manipulation](https://github.com/sigp/solidity-security-blog#block-timestamp-manipulation-1))
-- Random with blockhash ([SWC-120](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-120.md), [DASP-6](https://dasp.co/#item-6), [Entropy Illusion](https://github.com/sigp/solidity-security-blog#entropy-illusion-1))
+- Front-running / transaction reordering ([SWC-114](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-114.md), [DASP-7](https://dasp.co/#item-7), [SP-10](https://github.com/sigp/solidity-security-blog#SP-10))
+- Timestamp manipulation ([SWC-116](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-116.md), [DASP-8](https://dasp.co/#item-8), [SP-12](https://github.com/sigp/solidity-security-blog#SP-12))
+- Random with blockhash ([SWC-120](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-120.md), [DASP-6](https://dasp.co/#item-6), [SP-6](https://github.com/sigp/solidity-security-blog#SP-6))
 - Transaction censorship ([link](https://blog.ethereum.org/2015/06/06/the-problem-of-censorship/))
 
 ### Contract interaction
 Ethereum allows smart contracts to interact with each other. The following vulnerabilities are based on the fact that one contract cannot rely on the behaviour of an arbitrary contract.
-- Unchecked low-level call ([SWC-104](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-104.md), [DASP-4](https://dasp.co/#item-4), [Unchecked CALL Return Values](https://github.com/sigp/solidity-security-blog#unchecked-call-return-values-1))
-- Reentrancy ([SWC-107](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-107.md), [DASP-1](https://dasp.co/#item-1), [Re-Entrancy](https://github.com/sigp/solidity-security-blog#re-entrancy))
-- DoS with revert ([SWC-113](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-113.md), [Denial Of Service (DOS)](https://github.com/sigp/solidity-security-blog#denial-of-service-dos-1))
+- Unchecked low-level call ([SWC-104](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-104.md), [DASP-4](https://dasp.co/#item-4), [SP-9](https://github.com/sigp/solidity-security-blog#SP-9))
+- Reentrancy ([SWC-107](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-107.md), [DASP-1](https://dasp.co/#item-1), [SP-1](https://github.com/sigp/solidity-security-blog#SP-1))
+- DoS with revert ([SWC-113](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-113.md), [SP-11](https://github.com/sigp/solidity-security-blog#SP-11))
 - DoS with selfdestruct ([DASP-5](https://dasp.co/#item-5))
 
 ### Gas limitations
@@ -33,11 +33,11 @@ Blockchains require some payment for a transaction execution. In Ethereum, fee i
 ### Message structure
 Ethereum allows accounts to send messages to each other. This data is converted to function calls according to specific rules.
 - Signature collisions: two different functions may have the same signature
-- Short address attack ([DASP-9](https://dasp.co/#item-9), [Short Address/Parameter Attack](https://github.com/sigp/solidity-security-blog#short-addressparameter-attack-1))
+- Short address attack ([DASP-9](https://dasp.co/#item-9), [SP-8](https://github.com/sigp/solidity-security-blog#SP-8))
 
 ### Ether transfer
-Generally, all ETH transfers invoke contract’s fallback function and, thus, can be detected by the contract. However, there are several ways of ETH transfer that cannot be detected by the contract. Mostly, they are described in ([Unexpected Ether](https://github.com/sigp/solidity-security-blog#unexpected-ether-1)).
-- Ether transfer with selfdestruct: contract cannot handle incoming Ether sent by selfdestruct function
+Generally, all ETH transfers invoke contract’s fallback function and, thus, can be detected by the contract. However, there are several ways of ETH transfer that cannot be detected by the contract. Mostly, they are described in ([SP-3](https://github.com/sigp/solidity-security-blog#SP-3)).
+- Ether transfer with selfdestruct: contract cannot handle incoming Ether sent by `selfdestruct` function
 - Ether transfer with mining: contract cannot handle incoming Ether sent as a reward for block mining
 - Pre-sent Ether: contract cannot handle Ether sent to its address prior to the deploy
 
@@ -46,20 +46,20 @@ Vulnerabilities caused by the insecure use of Solidity language (or any other la
 
 ### Arithmetic
 Solidity operates only with integer numbers and does not check the correctness of arithmetic operations.
-- Over/underflow ([SWC-101](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-101.md), [DASP-3](https://dasp.co/#item-3), [Arithmetic Over/Under Flows](https://github.com/sigp/solidity-security-blog#arithmetic-overunder-flows))
-- Precision issues ([Floating Points and Precision](https://github.com/sigp/solidity-security-blog#floating-points-and-precision))
+- Over/underflow ([SWC-101](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-101.md), [DASP-3](https://dasp.co/#item-3), [SP-2](https://github.com/sigp/solidity-security-blog#SP-2))
+- Precision issues ([SP-15](https://github.com/sigp/solidity-security-blog#SP-15))
 
 ### Storage access
 In some cases, state variables can point to an incorrect storage slot.
-- Uninitialized storage pointer ([SWC-109](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-109.md))
-- Delegatecall and storage layout ([SWC-112](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-112.md), [Delegatecall](https://github.com/sigp/solidity-security-blog#delegatecall-1))
+- Uninitialized storage pointer ([SWC-109](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-109.md), [SP-14](https://github.com/sigp/solidity-security-blog#SP-14))
+- Delegatecall and storage layout ([SWC-112](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-112.md), [SP-4](https://github.com/sigp/solidity-security-blog#SP-4))
 - Overlap attack ([SWC-124](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-124.md))
 
 ### Internal Control Flow
 Some features of Solidity can lead to overcomplicated control flow graph.
 - Multiple inheritance ([SWC-125](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-125.md))
 - Arbitrary jump with function type variable ([SWC-127](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-127.md))
-- Assembly return in constructor: this trick tampers with standard deployment process; as result actually deployed bytecode has little common with the source code
+- Assembly return in constructor: this trick tampers with standard deployment process; as a result, actually deployed bytecode has little in common with the source code
 
 ## Model
 Vulnerabilities caused by mistakes in the model (architecture) of the system.
@@ -68,12 +68,12 @@ Vulnerabilities caused by mistakes in the model (architecture) of the system.
 Vulnerabilities connected with the insufficient or incorrect authorization implementation ([DASP-2](https://dasp.co/#item-2)).
 - Generous contracts ([SWC-105](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-105.md))
 - Suicidal contracts ([SWC-106](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-106.md))
-- Authorization with tx.origin ([SWC-115](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-115.md), [Tx.Origin Authentication](https://github.com/sigp/solidity-security-blog#txorigin-authentication-1))
-- Constructor name ([SWC-118](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-118.md), [Constructors with Care](https://github.com/sigp/solidity-security-blog#constructors-with-care-))
+- Authorization with tx.origin ([SWC-115](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-115.md), [SP-16](https://github.com/sigp/solidity-security-blog#SP-16))
+- Constructor name ([SWC-118](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-118.md), [SP-13](https://github.com/sigp/solidity-security-blog#SP-13))
 
 ### Trust
 Ethereum was designed as a trustless system. However, many smart contracts are built so that users have to trust the owner/administrator. This part of the system can be compromised or used in an undesirable way.
-- Overpowered owner ([Owner operations](https://github.com/sigp/solidity-security-blog#dos))
+- Overpowered owner ([Owner operations](https://github.com/sigp/solidity-security-blog#SP-11))
 - Vulnerable off-chain server: giving too much power to back-end can lead to undesired consequences if the off-chain server is hacked
 
 ### Privacy
