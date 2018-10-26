@@ -49,7 +49,7 @@ In some cases, state variables can point to an incorrect storage slot.
 - Delegatecall and storage layout ([SWC-112](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-112.md), [SP-4](https://github.com/sigp/solidity-security-blog#SP-4))
 - Overlap attack ([SWC-124](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-124.md))
 
-### Internal Control Flow
+### Internal control flow
 Some features of Solidity can lead to overcomplicated control flow graph.
 - Multiple inheritance ([SWC-125](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-125.md))
 - Arbitrary jump with function type variable ([SWC-127](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-127.md))
