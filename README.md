@@ -67,7 +67,7 @@ Vulnerabilities connected with the insufficient or incorrect authorization imple
 
 ### Trust
 Ethereum was designed as a trustless system. However, many smart contracts are built so that users have to trust the owner/administrator. This part of the system can be compromised or used in an undesirable way.
-- Overpowered owner ([Owner operations](https://github.com/sigp/solidity-security-blog#SP-11))
+- Overpowered owner ([SP-11](https://github.com/sigp/solidity-security-blog#SP-11) - see 3. Owner operations)
 - Vulnerable off-chain server: giving too much power to back-end can lead to undesired consequences if the off-chain server is hacked
 
 ### Privacy
