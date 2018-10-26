@@ -2,12 +2,6 @@
 Each standard vulnerability is made possible by one of the features of smart contracts. We unite types of vulnerabilities into groups by the corresponding features. We unite several groups into the same class if their features have the same nature.  
 Here is the list of classes and groups with some standard vulnerabilities categorized by this classification.
 
-## References
-The following registries were addressed in the classification.
-1. Smart Contract Weakness Classification [Registry](https://github.com/SmartContractSecurity/SWC-registry). 
-2. DASP [TOP-10](https://dasp.co/index.html).
-3. Sigma Prime [Repository](https://github.com/sigp/solidity-security-blog).
-
 ## Blockchain
 Vulnerabilities caused by blockchain nature of the system.
 
@@ -82,5 +76,13 @@ In Ethereum, smart contracts bytecode and values of state variables are availabl
 ### Economy
 Issues with the economic model of the system.
 - Voting issues: wrong voting logic that can lead to undesired effects
-- Tokenomics issues: undesired users behaviour justified by economic conjuncture of the token
-- Game Theory issues: undesired users behaviour justified by their feasible benefits
+- Tokenomics issues: undesired users behaviour caused by economic conjuncture of the token
+- Game Theory issues: undesired users behaviour caused by their feasible benefits
+
+## References
+
+The following registries were addressed in the classification.
+
+1. Smart Contract Weakness Classification [Registry](https://github.com/SmartContractSecurity/SWC-registry). 
+2. DASP [TOP-10](https://dasp.co/index.html).
+3. Sigma Prime [Repository](https://github.com/sigp/solidity-security-blog).
