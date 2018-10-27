@@ -2,12 +2,6 @@
 Each standard vulnerability is made possible by one of the features of smart contracts. We unite types of vulnerabilities into groups by the corresponding features. We unite several groups into the same class if their features have the same nature.  
 Here is the list of classes and groups with some standard vulnerabilities categorized by this classification.
 
-## References
-The following registries were addressed in the classification.
-1. Smart Contract Weakness Classification [Registry](https://github.com/SmartContractSecurity/SWC-registry). 
-2. DASP [TOP-10](https://dasp.co/index.html).
-3. Sigma Prime [Repository](https://github.com/sigp/solidity-security-blog).
-
 ## Blockchain
 Vulnerabilities caused by blockchain nature of the system.
 
@@ -55,7 +49,7 @@ In some cases, state variables can point to an incorrect storage slot.
 - Delegatecall and storage layout ([SWC-112](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-112.md), [SP-4](https://github.com/sigp/solidity-security-blog#SP-4))
 - Overlap attack ([SWC-124](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-124.md))
 
-### Internal Control Flow
+### Internal control flow
 Some features of Solidity can lead to overcomplicated control flow graph.
 - Multiple inheritance ([SWC-125](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-125.md))
 - Arbitrary jump with function type variable ([SWC-127](https://github.com/SmartContractSecurity/SWC-registry/blob/master/entries/SWC-127.md))
@@ -73,7 +67,7 @@ Vulnerabilities connected with the insufficient or incorrect authorization imple
 
 ### Trust
 Ethereum was designed as a trustless system. However, many smart contracts are built so that users have to trust the owner/administrator. This part of the system can be compromised or used in an undesirable way.
-- Overpowered owner ([Owner operations](https://github.com/sigp/solidity-security-blog#SP-11))
+- Overpowered owner ([SP-11](https://github.com/sigp/solidity-security-blog#SP-11) - see 3. Owner operations)
 - Vulnerable off-chain server: giving too much power to back-end can lead to undesired consequences if the off-chain server is hacked
 
 ### Privacy
@@ -82,5 +76,13 @@ In Ethereum, smart contracts bytecode and values of state variables are availabl
 ### Economy
 Issues with the economic model of the system.
 - Voting issues: wrong voting logic that can lead to undesired effects
-- Tokenomics issues: undesired users behaviour justified by economic conjuncture of the token
-- Game Theory issues: undesired users behaviour justified by their feasible benefits
+- Tokenomics issues: undesired users behaviour caused by economic conjuncture of the token
+- Game Theory issues: undesired users behaviour caused by their feasible benefits
+
+## References
+
+The following registries were addressed in the classification.
+
+1. Smart Contract Weakness Classification [Registry](https://github.com/SmartContractSecurity/SWC-registry). 
+2. DASP [TOP-10](https://dasp.co/index.html).
+3. Sigma Prime [Repository](https://github.com/sigp/solidity-security-blog).
