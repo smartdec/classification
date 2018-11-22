@@ -21,7 +21,7 @@ Ethereum allows smart contracts to interact with each other. The following vulne
 
 ### Gas limitations
 Blockchains require some payment for a transaction execution. In Ethereum, fee is proportional to the computational complexity of the code being executed. Vulnerabilities of this category are based on the fact that the amount of gas available for the transaction is limited.
-- Infinite loops: the execution of a function might exceed `block.gaslimit` due to a costly operations executed in a loop
+- Infinite loops ([SWC-129](https://smartcontractsecurity.github.io/SWC-registry/docs/SWC-129))
 - Transfer provides too little gas: receiving contract has only 2300 gas for its fallback function, which is not enough for external call, writing to storage, etc
 
 ### Message structure
